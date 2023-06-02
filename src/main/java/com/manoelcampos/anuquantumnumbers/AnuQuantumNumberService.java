@@ -9,7 +9,6 @@ import java.net.URISyntaxException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.util.Arrays;
 
 /**
  * Client to <a href="https://quantumnumbers.anu.edu.au">ANU Quantum Numbers</a> service.
@@ -96,7 +95,9 @@ public class AnuQuantumNumberService {
         System.out.printf(
                 "Generating %d real random integers from [0 .. %d] using %s%n",
                 n, NumberType.uint16.maxValue(), randomService.getClass().getSimpleName());
-        Arrays.stream(randomService.generateInt16Numbers(n)).forEach(System.out::println);
+        for (final int number : randomService.generateInt16Numbers(n)) {
+            System.out.println(number);
+        }
     }
 }
 
