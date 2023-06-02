@@ -16,9 +16,9 @@ Include the library inside your project's pom.xml:
 
 ## Example
 
-Check an example inside the [main method here](https://github.com/manoelcampos/anu-quantum-number-java-client/blob/master/src/main/java/com/manoelcampos/anuquantumnumbers/AnuQuantumNumberService.java#L93).
+Check an example inside the [main method here](https://github.com/manoelcampos/anu-quantum-number-java-client/blob/master/src/main/java/com/manoelcampos/anuquantumnumbers/AnuQuantumNumberClient.java#L93).
 
 The example is loading the service API key from a .env file.
 In order to make it to work inside your project, create a .env file inside your project root dir and insert your API key, as demonstrated in [ .env.example]( .env.example).
 
-If you don't want to use an .env file, just pass the API key to the `AnuQuantumNumberService` constructor.
+If you don't want to use an .env file, just pass the API key to the `AnuQuantumNumberClient` constructor.

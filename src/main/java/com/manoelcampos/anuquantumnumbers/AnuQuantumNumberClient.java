@@ -25,7 +25,7 @@ import java.net.http.HttpResponse;
  * @author Manoel Campos da Silva Filho
  * @see <a href="https://quantumnumbers.anu.edu.au/documentation">API Docs</a>
  */
-public class AnuQuantumNumberService {
+public class AnuQuantumNumberClient {
     public static final String APIKEY_ENV_VAR_NAME = "ANU_QUANTUM_NUMBERS_APIKEY";
     private static final String API_PATH = "https://api.quantumnumbers.anu.edu.au";
     private final String API_KEY;
@@ -38,7 +38,7 @@ public class AnuQuantumNumberService {
      * Reads the API Key from an environment variable with the name
      * as indicated by {@link #APIKEY_ENV_VAR_NAME}.
      */
-    public AnuQuantumNumberService() {
+    public AnuQuantumNumberClient() {
         this(Dotenv.load().get(APIKEY_ENV_VAR_NAME));
     }
 
@@ -46,7 +46,7 @@ public class AnuQuantumNumberService {
      * Instantiates an object for sending requests to the random.org service
      * to generate real random values.
      */
-    public AnuQuantumNumberService(final String apiKey) {
+    public AnuQuantumNumberClient(final String apiKey) {
         objectMapper = new ObjectMapper();
         API_KEY = apiKey;
         client = HttpClient.newBuilder().build();
@@ -99,7 +99,7 @@ public class AnuQuantumNumberService {
     }
 
     public static void main(final String[] args) {
-        final var randomService = new AnuQuantumNumberService();
+        final var randomService = new AnuQuantumNumberClient();
         final int n = 4;
         System.out.printf(
                 "Generating %d real random integers from [0 .. %d] using %s%n",
