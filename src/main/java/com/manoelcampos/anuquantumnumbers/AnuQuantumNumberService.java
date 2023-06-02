@@ -93,9 +93,10 @@ public class AnuQuantumNumberService {
     public static void main(final String[] args) {
         final var randomService = new AnuQuantumNumberService();
         final int n = 4;
-        final var type = NumberType.uint16;
-        System.out.printf("Generating %d real random integers from [0 .. %d] using %s%n", n, type.maxValue(), randomService.getClass().getSimpleName());
-        Arrays.stream(randomService.generateNumbers(n, type)).forEach(System.out::println);
+        System.out.printf(
+                "Generating %d real random integers from [0 .. %d] using %s%n",
+                n, NumberType.uint16.maxValue(), randomService.getClass().getSimpleName());
+        Arrays.stream(randomService.generateInt16Numbers(n)).forEach(System.out::println);
     }
 }
 
