@@ -26,6 +26,7 @@ import java.net.http.HttpResponse;
  * @see <a href="https://quantumnumbers.anu.edu.au/documentation">API Docs</a>
  */
 public class AnuQuantumNumberService {
+    public static final String APIKEY_ENV_VAR_NAME = "ANU_QUANTUM_NUMBERS_APIKEY";
     private static final String API_PATH = "https://api.quantumnumbers.anu.edu.au";
     private final String API_KEY;
     private final HttpClient client;
@@ -34,12 +35,20 @@ public class AnuQuantumNumberService {
     /**
      * Instantiates an object for sending requests to the random.org service
      * to generate real random values.
+     * Reads the API Key from an environment variable with the name
+     * as indicated by {@link #APIKEY_ENV_VAR_NAME}.
      */
     public AnuQuantumNumberService() {
-        objectMapper = new ObjectMapper();
+        this(Dotenv.load().get(APIKEY_ENV_VAR_NAME));
+    }
 
-        final var dotenv = Dotenv.load();
-        API_KEY = dotenv.get("ANU_QUANTUM_NUMBERS_APIKEY");
+    /**
+     * Instantiates an object for sending requests to the random.org service
+     * to generate real random values.
+     */
+    public AnuQuantumNumberService(final String apiKey) {
+        objectMapper = new ObjectMapper();
+        API_KEY = apiKey;
         client = HttpClient.newBuilder().build();
     }
 
