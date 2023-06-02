@@ -7,7 +7,7 @@
     <groupId>com.manoelcampos</groupId>
     <artifactId>anu-quantum-number-client</artifactId>
     <version>1.0.0</version>
-    <name>random.org client</name>
+    <name>ANU Quantum Numbers client</name>
     <url>https://github.com/manoelcampos/anu-quantum-number-java-client</url>
     <description>
         Java library to get real random integers from https://quantumnumbers.anu.edu.au
