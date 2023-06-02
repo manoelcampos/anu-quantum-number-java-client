@@ -18,7 +18,7 @@ import java.util.Arrays;
  * and insert the line below:
  *
  * <p>
- * ANU_QUANTUMNUMBERS_APIKEY=you-api-key
+ * ANU_QUANTUM_NUMBERS_APIKEY=you-api-key
  * </p>
  *
  * or create an environment variable with the name shown above.
@@ -40,7 +40,7 @@ public class AnuQuantumNumberService {
         objectMapper = new ObjectMapper();
 
         final var dotenv = Dotenv.load();
-        API_KEY = dotenv.get("ANU_QUANTUMNUMBERS_APIKEY");
+        API_KEY = dotenv.get("ANU_QUANTUM_NUMBERS_APIKEY");
         client = HttpClient.newBuilder().build();
     }
 
