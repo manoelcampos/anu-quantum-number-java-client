@@ -6,7 +6,7 @@
 
     <groupId>com.manoelcampos</groupId>
     <artifactId>anu-quantum-number-client</artifactId>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
     <name>ANU Quantum Numbers client</name>
     <url>https://github.com/manoelcampos/anu-quantum-number-java-client</url>
     <description>
