@@ -1,4 +1,4 @@
-# A Java client to get real random integers from https://quantumnumbers.anu.edu.au [![build](https://github.com/manoelcampos/anu-quantum-number-java-client/actions/workflows/build.yml/badge.svg)](https://github.com/manoelcampos/anu-quantum-number-java-client/actions/workflows/build.yml)
+# A Java client to get real random integers from https://quantumnumbers.anu.edu.au [![build](https://github.com/manoelcampos/anu-quantum-number-java-client/actions/workflows/build.yml/badge.svg)](https://github.com/manoelcampos/anu-quantum-number-java-client/actions/workflows/build.yml) [![javadoc](https://javadoc.io/badge2/com.manoelcampos/anu-quantum-number-client/javadoc.svg)](https://javadoc.io/doc/com.manoelcampos/anu-quantum-number-client)
 
 ## How to use
 
