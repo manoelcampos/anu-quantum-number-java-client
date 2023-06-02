@@ -10,7 +10,7 @@ Include the library inside your project's pom.xml:
 <dependency>
     <groupId>com.manoelcampos</groupId>
     <artifactId>anu-quantum-number-client</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 </dependency>
 ```
 
