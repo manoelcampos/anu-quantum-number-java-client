@@ -17,7 +17,7 @@ import java.net.http.HttpResponse;
  * and insert the line below:
  *
  * <p>
- * ANU_QUANTUM_NUMBER_APIKEY=you-api-key
+ * ANU_QUANTUM_NUMBER_API_KEY=you-api-key
  * </p>
  *
  * or create an environment variable with the name shown above.
@@ -26,7 +26,7 @@ import java.net.http.HttpResponse;
  * @see <a href="https://quantumnumbers.anu.edu.au/documentation">API Docs</a>
  */
 public class AnuQuantumNumberClient {
-    public static final String APIKEY_ENV_VAR_NAME = "ANU_QUANTUM_NUMBER_APIKEY";
+    public static final String APIKEY_ENV_VAR_NAME = "ANU_QUANTUM_NUMBER_API_KEY";
     private static final String API_PATH = "https://api.quantumnumbers.anu.edu.au";
     private final String API_KEY;
     private final HttpClient client;
